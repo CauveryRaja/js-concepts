@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Forms</title>
+        <script src="app.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <form method="post" action="/" id="registerForm" onsubmit="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" onchange="onFieldChange('username', username.value)" name="username" value="">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" onchange="onFieldChange('email', email.value)" value="">
+            </div>
+            <input type="submit" name="button" value="Submit">
+            <button type="button" name="button" onclick="showData()">Click me</button>
+        </form>
+        <div id="parent">
+            <span id="child">
+                sss
+            </span>
+        </div>
+    </body>
+</html>
