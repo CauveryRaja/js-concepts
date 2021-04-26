@@ -1,6 +1,6 @@
 a = 10;
 var a;
 
-i;
-let i = 5;
+i = 5;
+let i;
 const c;
