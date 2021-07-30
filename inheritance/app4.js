@@ -22,3 +22,14 @@ Student.prototype.getQualification = function() {
 
 let student = new Student('Raja', 24, 'BE', 8.5);
 console.log(student, student.getQualification());
+
+let obj = {
+    msg: 'hello',
+    print: function(name) {
+        console.log(this.msg+', '+ name);
+    }
+};
+
+obj.print.call({msg:'hai'}, 'ram');
+let boundFn = obj.print.bind({msg:'hai'}, 'raja');
+boundFn('soorya');
