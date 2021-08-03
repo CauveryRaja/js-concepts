@@ -57,3 +57,4 @@ Array.from(collection).forEach(element => {
 });
 
 console.log(document.getElementsByTagName('span')[0].innerHTML);
+console.log(document.getElementById('test')) // Returns first element
