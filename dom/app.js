@@ -36,3 +36,24 @@
 //     console.log('Event triggered...', event.detail);
 // });
 // setInterval(() => document.dispatchEvent(event2), 1000);
+
+
+// Checking return types and values of each approach
+console.log(document.getElementById('menu'))
+console.log(document.querySelector('#menu'));
+
+const htmlCollection = document.getElementById('menu').children;
+Array.from(htmlCollection).forEach(element => {
+    console.log(element.textContent);
+});
+
+for(let i=0; i<htmlCollection.length; i++) {
+    console.log(htmlCollection[i].textContent);
+}
+
+const collection = document.querySelector('#menu').children;
+Array.from(collection).forEach(element => {
+    console.log(element.textContent);
+});
+
+console.log(document.getElementsByTagName('span')[0].innerHTML);
