@@ -1,14 +1,15 @@
 a = 10;
 var a;
 
-i + 5;  // throws "i is not defined"
-let i;
+// throws "i is not defined"
+// i + 5;
+// let i;
 
-i = 5;  // throws "Cannot access i before initialisation"
-let i;
+// throws "Cannot access j before initialisation"
+// j = 5;
+// let j;
 
-const c;
-
+// Two functions with same name
 function foo() {
     function bar() {
         return 5;
@@ -20,3 +21,10 @@ function foo() {
 }
 
 console.log(foo());
+
+// Duplicate names for function and variables
+var sum;
+function sum() {
+    return 'sum';
+}
+console.log(sum);
