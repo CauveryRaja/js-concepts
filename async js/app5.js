@@ -38,4 +38,25 @@ Promise.allSettled([promise, promise2])
     console.log('All Settled promises rejected value', err)
 });
 
+// Chaining promises
+promise
+.then(data => data+50)
+.then(data => console.log('Chaining promises ', data));
+
+// Understanding Fetch
+fetch('https://jsonplaceholder.typicode.com/todos')
+.then(res => res.json())
+.then(data => console.log(data));
+
+fetch('https://jsonplaceholder.typicode.com/todos', {
+    method: 'POST',
+    body: {
+        id: 20,
+        description: 'my todo',
+        completed: false
+    }
+})
+.then(res => res.json())
+.then(data => console.log(data));
+
 console.log('Ending Async JS');
