@@ -11,10 +11,15 @@ let person = new Person('ram', 25);
 console.log('Person', person);
 person.computeAge();
 
-// function Student(course, grade) {
-//     this.course = course;
-//     this.grade = grade;
-// }
+function Student(name, dob, course, grade) {
+    Person.call(this, name, dob);
+    this.course = course;
+    this.grade = grade;
+}
+
+Object.assign(Student.prototype, Person.prototype);
+let student = new Student('raja', 25, 'CSE', 'O');
+console.log('Student', student);
 
 // Objects won't have access to normal functions prototype
 // function Student(course, grade) {
