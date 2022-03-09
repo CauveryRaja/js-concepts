@@ -7,14 +7,27 @@ function btnClick() {
     console.log('Button clicked...');
 }
 
+// function throttle(callback, interval) {
+//     let timerId;
+//     return function() {
+//         if(timerId)
+//             return;
+        
+//         callback();
+//         timerId = setTimeout(() => {
+//             timerId = undefined;
+//         }, interval);
+//     }
+// }
+
 function throttle(callback, interval) {
-    let timerId;
+    let canInvoke = true;
+
     return function() {
-        if(timerId)
-            return;
-        timerId = setTimeout(() => {
+        if(canInvoke) {
             callback();
-            timerId = undefined;
-        }, interval);
+            canInvoke = false;
+            setTimeout(() => canInvoke = true, interval);
+        }
     }
 }
