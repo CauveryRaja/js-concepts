@@ -6,10 +6,10 @@ function throttle(callback, waitTime) {
         if(shouldTrigger) {
             callback();
             shouldTrigger = false;
+            setTimeout(() => {
+                shouldTrigger = true;
+            }, waitTime);
         }
-        setTimeout(() => {
-            shouldTrigger = true;
-        }, waitTime);
     }
 }
 
