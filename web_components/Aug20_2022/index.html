@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web component</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .popover {
+        background-color: aquamarine;
+    }
+</style>
+<body>
+    <div class="popover">Hello, this is from template</div>
+    <pop-over data-text="Hello, this is new Web component" />
+    <template id="my-paragraph">
+        <style>
+            p {
+                color: red;
+            }
+        </style>
+        <p>My template paragraph</p>
+      </template>
+    <script src="app.js"></script>
+</body>
+</html>
